@@ -434,6 +434,10 @@ br,
     margin: 0px;
   }
 
+  .center-container {
+    width: 88%;
+  }
+
   form {
     width: 90%;
     margin: auto;
