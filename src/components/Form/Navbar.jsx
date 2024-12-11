@@ -22,10 +22,7 @@ export default function Navbar({ profile }) {
         <img
           src={Icons}
           alt="Icon"
-          style={{
-            width: "30px",
-            marginRight: "10px",
-          }}
+          className="icon-navbar"
         />
         <div className="navbar-logo-left">Starcore Analytics</div>
       </div>
