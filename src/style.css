@@ -10,29 +10,90 @@ br,
   user-select: none;
 }
 
+/* sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #3cbc51;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  color: white;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  margin: 20px 0;
+}
+
+.sidebar-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+}
+
+.sidebar-menu li a:hover {
+  text-decoration: underline;
+}
+
 /* navbar */
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.navbar-container.sidebar-open {
+  margin-left: 250px;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #3cbc51;
-  padding: 10px 20px;
+  padding: 0px 20px;
   color: white;
+  transition: margin-left 0.3s ease-in-out;
 }
 
-.navbar-logo {
+.hamburger-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
   display: flex;
-  width: fit-content;
+  align-items: center;
 }
 
 .icon-navbar {
   width: 30px;
   margin-right: 10px;
+  margin-left: 10px;
 }
 
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
 .navbar-logo-left {
   font-weight: 600;
   font-size: 20px;
+  color: #fff;
 }
 
 .navbar-logo-right {
@@ -199,6 +260,21 @@ br,
   background-color: #ffffff;
   border: #9cb197 solid 1px;
   border-radius: 5px;
+}
+
+.center-container-dual {
+  width: 50%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: #9cb197 solid 1px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sub-container {
+  width: "40%";
 }
 
 .asesmen {
@@ -436,6 +512,10 @@ br,
   .submit-button {
     width: 100%;
     margin: 0px;
+  }
+
+  .isi-ulang:hover {
+    text-decoration: underline;
   }
 
   .icon-navbar {
